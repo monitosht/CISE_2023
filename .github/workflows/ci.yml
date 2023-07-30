@@ -3,12 +3,8 @@ name: CI_action
 on:
   push:
     branches: [main]
-    paths: 
-      - '/cise_ass1a_worksheet2/cise_ass1a_worksheet2-frontend/**'
   pull_request:
     branches: [main]        
-    paths: 
-      - '/cise_ass1a_worksheet2/cise_ass1a_worksheet2-frontend/**'
 
 jobs:
   build:
@@ -29,12 +25,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: /cise_ass1a_worksheet2/cise_ass1a_worksheet2-frontend/
+        working-directory: cise_ass1a_worksheet2/cise_ass1a_worksheet2-frontend/
 
       - name: Run the tests
         run: npm test
-        working-directory: /cise_ass1a_worksheet2/cise_ass1a_worksheet2-frontend/
+        working-directory: cise_ass1a_worksheet2/cise_ass1a_worksheet2-frontend/
 
       - name: Build
         run: npm run build
-        working-directory: /cise_ass1a_worksheet2/cise_ass1a_worksheet2-frontend/
+        working-directory: cise_ass1a_worksheet2/cise_ass1a_worksheet2-frontend/
