@@ -8,7 +8,12 @@ const books = require('./routes/api/books');
 
 connectDB();
 
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors({ 
+    origin: true, 
+    credentials: true,
+    methods: ["POST", "GET", "PUT", "DELETE"]
+}));
+
 app.use(express.json({ extended: false }));
 
 app.get('/', (req, res) => res.send('Hello world!'));
