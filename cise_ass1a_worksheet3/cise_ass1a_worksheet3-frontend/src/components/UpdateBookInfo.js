@@ -18,7 +18,7 @@ function UpdateBookInfo(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8082/api/books/${id}`)
+      .get(`https://book-app-backend-five.vercel.app/api/books/${id}`)
       .then((res) => {
         setBook({
           title: res.data.title,
